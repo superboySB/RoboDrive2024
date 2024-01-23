@@ -22,7 +22,7 @@ odl login
 
 mim download mmdet3d --dataset nuscenes
 ```
-准备[比赛验证用数据](https://drive.google.com/file/d/1Hw59VToELsB_bJ9qTGuyn9zdDzaZSnT4/view?usp=sharing)，确定他们摆成了这样
+准备[比赛验证用数据](https://drive.google.com/file/d/1Hw59VToELsB_bJ9qTGuyn9zdDzaZSnT4/view?usp=sharing)并解压，然后确定他们摆成了这样
 
 ```bash
 .
@@ -33,11 +33,13 @@ mim download mmdet3d --dataset nuscenes
 ├── mmdet3d
 └── tools
 ```
-然后生成验证集
+安装环境的主要包
 ```sh
-bash tools/create_data.sh
+python setup.py develop
 ```
-看到`nuscenes`文件夹长这样
+然后运行`bash tools/create_data.sh`生成`.pkl`文件用于验证，或者可以直接在[这个页面](https://drive.google.com/drive/folders/1IAGH-io2wR3YjhNTMPc5Vp7kIRwa5Vdw)下载三个`.pkl`，然后放置在`./data/nuscenes/`位置
+
+可以看到`nuscenes`文件夹长这样
 ```bash
 .
 ├── basemap
