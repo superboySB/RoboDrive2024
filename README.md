@@ -7,13 +7,13 @@
 ### 部署Docker运行环境
 用docker安装运行环境，然后下载代码
 ```sh
-docker build . -t bevfusion --network host
+docker build . -t bevfusion:latest --network host
 
 docker run -itd --privileged -v /tmp/.X11-unix:/tmp/.X11-unix:ro -e DISPLAY=$DISPLAY --gpus all --network=host --name=bevfusion bevfusion:latest /bin/bash
 
 docker exec -it bevfusion /bin/bash
 
-git clone https://github.com/superboySB/RoboDrive2024
+cd /workspace && git clone https://github.com/superboySB/RoboDrive2024
 ```
 
 拥有一个[OpenDataLab](https://opendatalab.com)的账户，然后登录并下载nuscenes数据集，大概要下载4点开始
