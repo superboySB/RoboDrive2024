@@ -1,8 +1,6 @@
 # RoboDrive2024
 自动驾驶挑战赛 （BIT-LINC方案），我们（or我自己）准备玩一下`5`这个track，避开去卷纯视觉的BEVFormer，并且尽可能去尝试nvidia进行了TensorRT优化后的[那个版本](https://github.com/NVIDIA-AI-IOT/Lidar_AI_Solution/tree/master/CUDA-BEVFusion)（因为手上有硬件），尝试快速入门一下多模数据融合下的应用，感觉这会是一个蛮好的机会。
 
-结论：在开环的感知track上刷点还是过于抽象了，基础实在是跟不上，光是理解lidar数据就花了过于长的时间了，又想到了BEV-Planner提到过的一些e2e决策上难以适配这些方案的情况，感觉自己严重地干不过，遂放弃.....
-
 ## 安装环境
 
 
@@ -65,4 +63,5 @@ python setup.py develop
 ```sh
 bash tools/test_corruption.sh
 ```
-
+## Reference
+在开环的感知track上刷点还是过于抽象了，基础实在是跟不上，光是理解lidar数据就花了过于长的时间了，又想到了BEV-Planner提到过的一些e2e决策上难以适配这些方案的情况，感觉自己严重地干不过，遂中途就放弃了.....
